@@ -1,0 +1,39 @@
+@page
+@model JustCrud.Pages.CompanyPages.ShowAll
+@{
+    ViewData["Title"] = "ShowAll";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <a asp-page="./CreateCompany" class="btn btn-primary">Create</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                ViewData["name"]="hello";
+                foreach (var item in Model.companies)
+                {
+                    <tr>
+                        <td>
+                            @item.name
+                        </td>
+                        <td>
+                            <a asp-page="./ViewCompany" asp-route-id="@item._id" class="btn btn-primary">View</a> |
+                            <a asp-page="./DeleteCompany" asp-route-id="@item._id" class="btn btn-danger">Delete</a> |
+                            <a asp-page="./EditCompany" asp-route-id="@item._id" class="btn btn-warning">Edit</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+
+</div>

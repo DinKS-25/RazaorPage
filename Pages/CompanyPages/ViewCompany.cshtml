@@ -1,0 +1,22 @@
+@page 
+@model JustCrud.Pages.CompanyPages.ViewCompany
+@{
+    ViewData["Title"] = "ViewCompany";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <p>
+        @Model.company._id
+    </p><br>
+    <p>
+        @Model.company.name
+    </p><br>
+    <p>
+        @Model.company.address
+    </p><br>
+    <p>
+        @Model.company.employeeCount
+    </p><br>
+</div>

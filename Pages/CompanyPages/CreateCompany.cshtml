@@ -1,0 +1,28 @@
+@page
+@model JustCrud.Pages.CompanyPages.CreateCompany
+@{
+    ViewData["Title"] = "CreateCompany";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="companies.name" class="control-label"></label>
+            <input asp-for="companies.name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="companies.address" class="control-label"></label>
+            <input asp-for="companies.address" class="form-control" />
+            
+        </div>
+        <div class="form-group">
+            <label asp-for="companies.employeeCount" class="control-label"></label>
+            <input asp-for="companies.employeeCount" class="form-control" type="number" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

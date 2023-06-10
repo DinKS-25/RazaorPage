@@ -1,0 +1,26 @@
+@page "{id}"
+@model JustCrud.Pages.CompanyPages.DeleteCompany
+@{
+    ViewData["Title"] = "DeleteCompany";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <p>
+        @Model.company._id
+    </p><br>
+    <p>
+        @Model.company.name
+    </p><br>
+    <p>
+        @Model.company.address
+    </p><br>
+    <p>
+        @Model.company.employeeCount
+    </p><br>
+    <form method="post">
+        <button class="btn btn-danger">Delete</button>
+        <input type="hidden" name="id" value=@Model.company._id>
+    </form>
+</div>

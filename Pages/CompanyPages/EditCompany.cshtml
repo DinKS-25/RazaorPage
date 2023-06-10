@@ -1,0 +1,29 @@
+@page 
+@model JustCrud.Pages.CompanyPages.EditCompany
+@{
+    ViewData["Title"] = "EditCompany";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <input asp-for="company._id" class="form-control" value="@Model.company._id" type="hidden"/>
+        <div class="form-group">
+            <label asp-for="company.name" class="control-label"></label>
+            <input asp-for="company.name" class="form-control" value="@Model.company.name"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="company.address" class="control-label"></label>
+            <input asp-for="company.address" class="form-control" value="@Model.company.address"/>
+            
+        </div>
+        <div class="form-group">
+            <label asp-for="company.employeeCount" class="control-label"></label>
+            <input asp-for="company.employeeCount" class="form-control" type="number" value="@Model.company.employeeCount"/>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
